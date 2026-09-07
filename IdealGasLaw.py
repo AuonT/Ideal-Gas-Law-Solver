@@ -4,20 +4,22 @@ def IdealGasLaw():
     R = 8.314462618 #constant for ideal gas law
 
     variables = {"P":None, "V":None, "n":None,"T":None}
-    target = float(input("Please enter the unit you would like to solve for:\n\n1. Pressure (P)\n2. Volume (V)\n3. Number of moles (n)\n4. Temperature (T)\n\nPlease enter the number corresponding to your choice: "))
+    target = input("Please enter the unit you would like to solve for:\n\n1. Pressure (P)\n2. Volume (V)\n3. Number of moles (n)\n4. Temperature (T)\n\nPlease enter the number corresponding to your choice: ")
 
     options = {
-        "1": "P"
+        "1": "P",
         "2": "V",
         "3": "n",
         "4":" T"
         }
 
-    target = options[str(int(target))]
+    target = options[target]
 
     for var in variables:
         if var != target:
             variables[var] = float(input(f"Please enter the value for {var}: "))
+
+    
 
 
 
